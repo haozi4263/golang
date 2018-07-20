@@ -1,0 +1,7 @@
+指针类型
+
+make new
+
+make用来分配引用类型的内存，比如map,slice以及channel
+
+new用来分配出引用类型的所有其他类型的内存，比如int数组等

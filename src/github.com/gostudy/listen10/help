@@ -1,0 +1,13 @@
+map类型是一个key-value的数据结构,存储1w无性能压力
+
+
+声明:
+
+//var a map[key的类型]value的类型
+
+var a map[string]int
+var b map[int]string
+var c map[float32]string
+
+
+map必须初始化才能使用，否则panic
