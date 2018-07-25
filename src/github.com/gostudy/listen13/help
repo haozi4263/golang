@@ -1,0 +1,22 @@
+
+GO的方法是在函数的前面加上一个接收者，这样编译器就知道这个方法的属于那个类型了
+
+type A struct {
+
+}
+func (a A) Test(s strint) {
+}
+
+通过a来访问A的实例中的成员变量，也就是struct中的字段
+    Test的接收者，因此A这个对象有一个Test方法
+
+指针类型传递的是地址
+值类型传递的是副本无法修改，拷贝性能损害比较大
+
+什么时候用值类型/指针类型作为接收者？
+    1.需要修改接受者中的值的时候------用指针类型
+    2.接受着是大对象的时候，副本拷贝代价比较高
+    3.一般来说，通常使用指针类型作为接受者
+
+
+    json:{"Name":"it","Count":100,"Student":[{"Id":"0","Name":"stu%d0","Sex":"man"},{"Id":"1","Name":"stu%d1","Sex":"man"},{"Id":"2","Name":"stu%d2","Sex":"man"},{"Id":"3","Name":"stu%d3","Sex":"man"},{"Id":"4","Name":"stu%d4","Sex":"man"},{"Id":"5","Name":"stu%d5","Sex":"man"},{"Id":"6","Name":"stu%d6","Sex":"man"},{"Id":"7","Name":"stu%d7","Sex":"man"},{"Id":"8","Name":"stu%d8","Sex":"man"},{"Id":"9","Name":"stu%d9","Sex":"man"}]}
