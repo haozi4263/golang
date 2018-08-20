@@ -43,7 +43,7 @@ func (d Pig) Name() string  {
 	return "猪八戒"
 }
 
-func main()  {
+func testInterface1()  {
 	var d Dog
 	var a Animal
 	a = d
@@ -57,4 +57,29 @@ func main()  {
 	a.Eat()
 	a.Talk()
 	a.Name()
+}
+
+func just(a Animal)  {
+	//d, ok := a.(Dog)  方法1
+	//p, ok := a.(Dog)  方法1
+	switch v := a.(type) {  //方法2
+	case Dog:
+		fmt.Printf("v is dog:%v\n",v)
+	case Pig:
+		fmt.Printf("v is pig:%v\n",v)
+	default:
+		fmt.Printf("not support")
+	}
+}
+
+func testjust()  {
+	var d Dog
+	just(d)
+}
+
+
+
+func main()  {
+	testInterface1()
+	//testjust()
 }
