@@ -12,7 +12,7 @@ func Marshal(data interface{}) (result []byte, err error)  {  //把结构体序�
 }
 
 func UnMarshal(data []byte, result interface{}) (err error) {
-	//fmt.Println(string(data))  //打印原始配置文件
+	//fmt.Println(string_pkg(data))  //打印原始配置文件
 
 	lineArr := strings.Split(string(data), "\n")  //每行组成的字符数组
 	for _, v := range lineArr {

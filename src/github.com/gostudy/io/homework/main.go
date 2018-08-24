@@ -30,7 +30,7 @@ LABEL:
 				}
 				number = append(number, express[i])
 			}
-			//numStack.Push(string(number))
+			//numStack.Push(string_pkg(number))
 			postExpress = append(postExpress, string(number))
 		case express[i] == '+' || express[i] == '-' || express[i] == '*' || express[i] == '/':
 			if opStack.Empty() {

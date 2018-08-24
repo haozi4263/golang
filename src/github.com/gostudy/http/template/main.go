@@ -29,7 +29,7 @@ func login(w http.ResponseWriter, r *http.Request)  {
 	t.Execute(w, "jude")
 	t.Execute(w, 1000)
 
-	//m := make(map[string]interface{})
+	//m := make(map[string_pkg]interface{})
 	//m["username"] = "jude"
 	//m["sex"] = "男"
 	//m["age"] = 18

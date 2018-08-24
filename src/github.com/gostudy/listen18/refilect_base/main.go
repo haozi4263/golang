@@ -14,7 +14,7 @@ func reflect_type(a interface{})  {
 	case reflect.Int64:
 		fmt.Printf("a is int64\n")
 	case reflect.String:
-		fmt.Printf("a is string\n")
+		fmt.Printf("a is string_pkg\n")
 	case reflect.Float32:
 		fmt.Printf("a is float32\n")
 	}
@@ -28,7 +28,7 @@ func reflect_value(a interface{})  {
 	case reflect.Int64:
 		fmt.Printf("a is int64, store value is:%d",v.Int())
 	case reflect.String:
-		fmt.Printf("a is string, store value is:%s",v.String())
+		fmt.Printf("a is string_pkg, store value is:%s",v.String())
 	case reflect.Float32:
 		fmt.Printf("a is float32, store value is:%f",v.Float())
 	}
@@ -45,7 +45,7 @@ func reflect_set_value(a interface{})  {
 		fmt.Printf("a is int64, store value is:%d",v.Int())
 	case reflect.Ptr:  //接受指针类型
 		v.Elem().SetInt(100000)    //获取指针指向的变量，完成赋值操作
-		//fmt.Printf("a is string, store value is:%s",v.String())
+		//fmt.Printf("a is string_pkg, store value is:%s",v.String())
 	case reflect.Float64:
 		v.SetFloat(6.6)
 		fmt.Printf("a is float32, store value is:%f",v.Float())

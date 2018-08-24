@@ -23,7 +23,7 @@ func testInterface1()  {
 func testSwitch(a interface{})  {
 	switch a.(type) {
 	case string:
-		fmt.Printf("a is string,value:%v\n", a.(string))
+		fmt.Printf("a is string_pkg,value:%v\n", a.(string))
 	case int:
 		fmt.Printf("a is int value:%v\n", a.(int))
 	case int32:
@@ -36,7 +36,7 @@ func testSwitch(a interface{})  {
 func testSwitch1(a interface{})  {  //方法2，推荐使用
 	switch v := a.(type) {
 	case string:
-		fmt.Printf("a is string,value:%v\n", v)
+		fmt.Printf("a is string_pkg,value:%v\n", v)
 	case int:
 		fmt.Printf("a is int value:%v\n", v)
 	case int32:
