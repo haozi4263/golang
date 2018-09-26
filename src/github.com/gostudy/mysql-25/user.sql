@@ -1,0 +1,11 @@
+CREATE TABLE `user` (
+`id`  int(20) NOT NULL AUTO_INCREMENT ,
+`name`  varchar(20) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT '' ,
+`age`  int(11) NULL DEFAULT 0 ,
+PRIMARY KEY (`id`)
+)
+ENGINE=InnoDB
+DEFAULT CHARACTER SET=latin1 COLLATE=latin1_swedish_ci
+AUTO_INCREMENT=3
+ROW_FORMAT=COMPACT
+;
