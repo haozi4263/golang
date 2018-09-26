@@ -3,25 +3,58 @@ package main
 import (
 	"flag"
 	"fmt"
+	"os/exec"
 )
 
 var recusive bool
-var test string
+var app string
 var port int
 
 func init()  {
 	//
 	flag.BoolVar(&recusive, "r", false, " 使用-r选项")
-	flag.StringVar(&test, "t", "hello golang", "使用-t选项")
+	flag.StringVar(&app, "t", "hello golang", "使用-t选项")
 	flag.IntVar(&port, "p", 8888, "使用-p选项")
 
-	flag.Parse()
+
+	flag.Parse()  //使选项参数生效
 }
 
 func main()  {
 	fmt.Printf("recusive:%v\n", recusive)
-	fmt.Printf("test:%v\n", test)
+	fmt.Printf("app:%v\n", app)
 	fmt.Printf("port:%v\n",port)
 
-	//输入方法：.\flat_args.exe -p 2222  -t "nihao" -r ture
+	//if test == "ping" {
+	//	ping()
+	//
+	//}
+
+	switch  {
+	case app == "ping":
+		ping("app")
+	case app == "docker":
+		docker()
+	}
+	 
+
+
+}
+
+
+func ping(app string)  {
+
+		app = `ls /
+			pwd
+			ls -l
+            docker ps
+		`
+		cmd := exec.Command("/bin/bash", "-c", app)
+		out, _ :=cmd.Output()
+		fmt.Println(string(out))
+		//fmt.Println("app:", app)
+
+}
+func docker()  {
+	fmt.Printf("docker build")
 }

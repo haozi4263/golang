@@ -112,7 +112,7 @@ func testMulti()  {
 
 	for i :=1;i < 10; i++{
 		for j := 1;j <= i; j++ {
-			fmt.Printf("%d * %d = %d\t",j,i,j*i)  \\ \t等于4个空白字符
+			fmt.Printf("%d * %d = %d\t",j,i,j*i)  //t等于4个空白字符
 		}
 		fmt.Println()
 		}

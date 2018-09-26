@@ -12,9 +12,9 @@ func main() {
 	var recusive bool
 	app := cli.NewApp()
 	app.Flags = []cli.Flag{   //切片
-		cli.StringFlag{
-			Name:        "lang, l",
-			Value:       "english",
+		cli.StringFlag{ //字符选项
+			Name:        "lang, l",  //--lang长选项，-l短选项
+			Value:       "english",  //默认值
 			Usage:       "select language",
 			Destination: &language,
 		},
@@ -34,6 +34,11 @@ func main() {
 		fmt.Println("recusive is ", recusive)
 		fmt.Println("language is ", language)
 		return nil
+		//return process(c)  //调用函数执行业务逻辑
 	}
 	app.Run(os.Args)
 }
+
+//func process(c *cli.Context) (err error)  {
+//
+//}
